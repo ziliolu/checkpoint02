@@ -3,6 +3,7 @@ package test;
 import domain.Cachorro;
 import domain.Cliente;
 import domain.PorteAnimal;
+import domain.TipoTosa;
 
 import java.time.LocalDate;
 

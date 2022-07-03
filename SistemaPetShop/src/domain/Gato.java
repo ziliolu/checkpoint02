@@ -11,12 +11,6 @@ public class Gato extends Animal{
     @Override
     public double calcularPrecoBanho() {
         double precoFixoBanho = 10D;
-        if (super.porte == PorteAnimal.P) {
-            return precoFixoBanho + PorteAnimal.P.getVALUE();
-        } else if (super.porte == PorteAnimal.M) {
-            return precoFixoBanho + PorteAnimal.M.getVALUE();
-        } else { //se o animal for grande
-            return precoFixoBanho + PorteAnimal.G.getVALUE();
-        }
+        return precoFixoBanho + this.porte.getPrecoBase();
     }
 }
