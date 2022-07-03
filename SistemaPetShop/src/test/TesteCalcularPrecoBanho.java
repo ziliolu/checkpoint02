@@ -13,6 +13,7 @@ public class TesteCalcularPrecoBanho {
         Cachorro nina = new Cachorro("Nina", dataNascimentoNina, donaNina, PorteAnimal.M);
 
         System.out.println(nina.calcularPrecoBanho()); //preco banho cachorro M
+        System.out.println("teste");
 
     }
 }
