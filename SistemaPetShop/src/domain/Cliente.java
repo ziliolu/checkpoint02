@@ -13,13 +13,11 @@ public class Cliente {
     }
 
     public void listarAnimaisCliente() {
-        String idade;
         System.out.println(String.format("Pet's cadastrados para o Cliente: %s", this.nome));
         for ( Animal animal: listaAnimais ) {
+            //idade = animal.calcularIdade() == 0 ? "Filhote" : animal.calcularIdade().toString();
 
-            idade = animal.calcularIdade() == 0 ? "Filhote" : animal.calcularIdade().toString();
-
-            System.out.println(String.format("%s - idade: %s", animal.getNome(), idade));
+            System.out.println(animal.getNome() + " idade: " + animal.calcularIdade());
         }
     }
 

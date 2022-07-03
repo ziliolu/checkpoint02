@@ -23,7 +23,7 @@ public abstract class Animal {
         return 0;
     }
 
-    public Integer calcularIdade() {
+    public Period calcularIdade() {
         LocalDate today = LocalDate.now();
         return Period.between(dataNascimento, today);
     }
