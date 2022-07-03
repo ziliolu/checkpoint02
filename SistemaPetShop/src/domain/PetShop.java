@@ -14,6 +14,10 @@ public class PetShop {
         this.cidade = cidade;
     }
 
+    public void exibirHorarioAtendimento() {
+        System.out.println(String.format("Atende das %s às %s", horarioAbertura, horarioFechamento));
+    }
+
     public String getNome() {
         return nome;
     }
