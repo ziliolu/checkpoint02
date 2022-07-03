@@ -23,9 +23,9 @@ public abstract class Animal {
         return 0;
     }
 
-    public Period calcularIdade() {
+    public Integer calcularIdade() {
         LocalDate today = LocalDate.now();
-        return Period.between(dataNascimento, today);
+        return Period.between(dataNascimento, today).getYears();
     }
 
     public String getNome() {

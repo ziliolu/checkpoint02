@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Cliente {
     private String nome;
     private String cpf;
-    private ArrayList<Animal> listaAnimais;
+    private ArrayList<Animal> listaAnimais = new ArrayList<>();
 
     public Cliente(String nome, String cpf) {
         this.nome = nome;
@@ -13,11 +13,13 @@ public class Cliente {
     }
 
     public void listarAnimaisCliente() {
+        String idade;
+
         System.out.println(String.format("Pet's cadastrados para o Cliente: %s", this.nome));
         for ( Animal animal: listaAnimais ) {
-            //idade = animal.calcularIdade() == 0 ? "Filhote" : animal.calcularIdade().toString();
+            idade = animal.calcularIdade() == 0 ? "Filhote" : "Idade: " + animal.calcularIdade().toString() + " ano(s)";
 
-            System.out.println(animal.getNome() + " idade: " + animal.calcularIdade());
+            System.out.println(animal.getNome() + " - " + idade);
         }
     }
 
