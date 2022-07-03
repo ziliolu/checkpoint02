@@ -4,8 +4,16 @@ import java.time.LocalDate;
 
 public class Cachorro extends Animal{
 
+    String racaCachorro;
+
     public Cachorro(String nome, LocalDate dataNascimento, Cliente dono, PorteAnimal porte) {
         super(nome, dataNascimento, dono, porte);
+    }
+
+    //exemplo sobrecarga
+    public Cachorro(String nome, LocalDate dataNascimento, Cliente dono, PorteAnimal porte, String racaCachorro) {
+        super(nome, dataNascimento, dono, porte);
+        this.racaCachorro = racaCachorro;
     }
 
     @Override
