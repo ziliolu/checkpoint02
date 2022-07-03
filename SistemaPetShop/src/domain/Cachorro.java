@@ -4,19 +4,25 @@ import java.time.LocalDate;
 
 public class Cachorro extends Animal{
 
+    String racaCachorro;
+
     public Cachorro(String nome, LocalDate dataNascimento, Cliente dono, PorteAnimal porte) {
         super(nome, dataNascimento, dono, porte);
+    }
+
+    //exemplo sobrecarga
+    public Cachorro(String nome, LocalDate dataNascimento, Cliente dono, PorteAnimal porte, String racaCachorro) {
+        super(nome, dataNascimento, dono, porte);
+        this.racaCachorro = racaCachorro;
     }
 
     @Override
     public double calcularPrecoBanho() {
         double precoFixoBanho = 20D;
-        if (super.porte == PorteAnimal.P) {
-            return precoFixoBanho + PorteAnimal.P.getVALUE();
-        } else if (super.porte == PorteAnimal.M) {
-            return precoFixoBanho + PorteAnimal.M.getVALUE();
-        } else { //se o animal for grande
-            return precoFixoBanho + PorteAnimal.G.getVALUE();
-        }
+        return precoFixoBanho + this.porte.getPrecoBase();
+    }
+
+    public double calcularPrecoTosa(TipoTosa tipoTosa) {
+        return tipoTosa.getPrecoBase() + this.porte.getPrecoBase();
     }
 }

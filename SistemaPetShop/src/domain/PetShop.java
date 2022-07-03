@@ -1,6 +1,7 @@
 package domain;
 
 public class PetShop {
+<<<<<<< HEAD
     private String nome;
     private String cnpj;
     private String cidade;
@@ -61,4 +62,7 @@ public class PetShop {
     public void setHorarioFechamento(String horarioFechamento) {
         this.horarioFechamento = horarioFechamento;
     }
+=======
+
+>>>>>>> 0393eb94806237fd124664aa5895dc7c4879ca08
 }

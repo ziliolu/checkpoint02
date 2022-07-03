@@ -1,17 +1,23 @@
 package domain;
 
 public enum PorteAnimal {
-    P(10),
-    M(20),
-    G(30);
+    P(10, "pequeno"),
+    M(20, "médio"),
+    G(30, "grande");
 
-    private int VALUE;
+    private int precoBase;
+    private String nomePorte;
 
-    PorteAnimal(int VALUE) {
-        this.VALUE = VALUE;
+    PorteAnimal(int precoBase, String nomePorte) {
+        this.precoBase = precoBase;
+        this.nomePorte = nomePorte;
     }
 
-    public int getVALUE() {
-        return VALUE;
+    public int getPrecoBase() {
+        return precoBase;
+    }
+
+    public String getNomePorte() {
+        return nomePorte;
     }
 }
