@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Cliente {
     private String nome;
+    private String sobrenome;
     private String cpf;
     private ArrayList<Animal> listaAnimais;
 
