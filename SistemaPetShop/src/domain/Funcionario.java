@@ -19,6 +19,10 @@ public class Funcionario {
         return valorTotalVendas * (percComissao / 100);
     }
 
+    public Double calcularSalarioBase(Double valorTotalVendas) {
+        return salario + calcularComissao(valorTotalVendas);
+    }
+
     public String getNome() {
         return nome;
     }
