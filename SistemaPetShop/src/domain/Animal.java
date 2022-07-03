@@ -1,6 +1,7 @@
 package domain;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public abstract class Animal {
     private String nome;
@@ -22,5 +23,40 @@ public abstract class Animal {
         return 0;
     }
 
+    public Integer calcularIdade() {
+        LocalDate today = LocalDate.now();
+        return Period.between(dataNascimento, today);
+    }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public Cliente getDono() {
+        return dono;
+    }
+
+    public void setDono(Cliente dono) {
+        this.dono = dono;
+    }
+
+    public PorteAnimal getPorte() {
+        return porte;
+    }
+
+    public void setPorte(PorteAnimal porte) {
+        this.porte = porte;
+    }
 }
