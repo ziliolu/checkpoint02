@@ -10,6 +10,11 @@ public class Gato extends Animal{
         super(nome, dataNascimento, dono, porte);
     }
 
+    public Gato(String nome, LocalDate dataNascimento, PorteAnimal porte) {
+        super(nome, dataNascimento, porte);
+    }
+
+
     @Override
     public double calcularPrecoBanho() {
         double precoFixoBanho = 10D;

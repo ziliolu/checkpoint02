@@ -9,13 +9,16 @@ public abstract class Animal {
     private Cliente dono;
     protected PorteAnimal porte;
 
-    //falta adicionar cliente no construtor
-
-
     public Animal(String nome, LocalDate dataNascimento, Cliente dono, PorteAnimal porte) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.dono = dono;
+        this.porte = porte;
+    }
+
+    public Animal(String nome, LocalDate dataNascimento, PorteAnimal porte) {
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
         this.porte = porte;
     }
 

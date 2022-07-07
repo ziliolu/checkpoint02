@@ -7,8 +7,13 @@ public class Cachorro extends Animal{
     String racaCachorro;
     double precoFixoBanho;
 
+
     public Cachorro(String nome, LocalDate dataNascimento, Cliente dono, PorteAnimal porte) {
         super(nome, dataNascimento, dono, porte);
+        precoFixoBanho = 20D;
+    }
+    public Cachorro(String nome, LocalDate dataNascimento, PorteAnimal porte) {
+        super(nome, dataNascimento, porte);
         precoFixoBanho = 20D;
     }
 

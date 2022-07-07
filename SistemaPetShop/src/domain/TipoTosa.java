@@ -10,9 +10,9 @@ public enum TipoTosa {
     private int precoBase;
     private String nomeTosa;
 
-    TipoTosa(int precoBase, String descricaoTosa) {
+    TipoTosa(int precoBase, String nomeTosa) {
         this.precoBase = precoBase;
-        this.nomeTosa = descricaoTosa;
+        this.nomeTosa = nomeTosa;
     }
 
     public int getPrecoBase() {
